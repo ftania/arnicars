@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Arnicars</title>
+  </head>
+  <body>
+    <header>
+      <h2>ARNICARS</h2>
+      <div class="header-phone">
+        <img src="img/icons/phone.svg" alt="phone icon" />
+        <p>097 599 33 99</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="car-image-section">
+        <div class="text">
+          <h1>Дізнайтеся вартість авто<br /><span>за 30 секунд!</span></h1>
+          <p>
+            Терміновий автовикуп у Львові та області – продайте авто вигідно вже
+            сьогодні!
+          </p>
+        </div>
+        <div class="rating">
+          <p>Пройшло оцінку</p>
+          <p><span class="number">3449</span>авто</p>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="form-container">
+          <h2>Дізнайтесь приблизну вартість авто онлайн</h2>
+          <div class="form-step-indicator">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <hr />
+          <form id="carForm">
+            <div class="form-step step-1 active">
+              <div class="form-row">
+                <select required>
+                  <option value="" disabled selected>Виберіть марку</option>
+                  <option value="Acura">Acura</option>
+                  <option value="Alfa Romeo">Alfa Romeo</option>
+                  <option value="Audi">Audi</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Opel">Opel</option>
+                  <option value="Renault">Renault</option>
+                  <option value="Skoda">Skoda</option>
+                </select>
+                <select required>
+                  <option value="" disabled selected>
+                    Виберіть рік випуску
+                  </option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <select required>
+                  <option value="" disabled selected>Виберіть модель</option>
+                  <option value="8 series Gran Coupe">
+                    8 series Gran Coupe
+                  </option>
+                  <option value="A4">A4</option>
+                  <option value="A7">A7</option>
+                  <option value="Q8">Q8</option>
+                  <option value="X5">X5</option>
+                </select>
+                <select required>
+                  <option value="" disabled selected>
+                    Виберіть обʼєм двигуна
+                  </option>
+                  <option value="2.0">2.0</option>
+                  <option value="3.0">3.0</option>
+                  <option value="4.0">4.0</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <input type="text" placeholder="Ваше імʼя" />
+                <input type="text" placeholder="Ваш телефон" />
+              </div>
+              <button type="button" class="next-btn">
+                Порахувати онлайн
+                <span
+                  ><img src="img/icons/button-arrow.svg" alt="arrow"
+                /></span>
+              </button>
+            </div>
+
+            <div class="form-step step-2">
+              <div class="form-row">
+                <select required>
+                  <option value="" disabled selected>
+                    Виберіть тип палива
+                  </option>
+                  <option value="Бензин">Бензин</option>
+                  <option value="Дизель">Дизель</option>
+                </select>
+                <select required>
+                  <option value="" disabled selected>Виберіть привід</option>
+                  <option value="Повний">Повний</option>
+                  <option value="Передній">Передній</option>
+                  <option value="Задній">Задній</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <select required>
+                  <option value="" disabled selected>
+                    Виберіть коробку передач
+                  </option>
+                  <option value="Автомат">Автомат</option>
+                  <option value="Механіка">Механіка</option>
+                </select>
+                <select required>
+                  <option value="" disabled selected>Виберіть пробіг</option>
+                  <option value="2000">2000</option>
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                  <option value="6000">6000</option>
+                  <option value="7000">7000</option>
+                </select>
+              </div>
+              <div class="form-row">
+              <button type="submit" class="submit-btn">
+                Показати ціну
+                <span
+                  ><img src="img/icons/button-arrow.svg" alt="arrow"
+                /></span>
+              </button>
+              </div>
+            </div>
+            <div class="form-step step-3">
+              <form class="form-summary">
+                <div class="form-summary-columns">
+                  <div class="summary-left">
+                    <h3>Ваш автомобіль</h3>
+                    <ul class="summary-list"></ul>
+                  </div>
+                  <hr class="vertical-hr">
+                  <div class="summary-right">
+                    <h3>Вартість Вашого автомобіля</h3>
+                    <div>
+                      <p class="summary-price"><span><img src="img/icons/money-white.svg" alt="money icon"></span>1 000 000 грн</p>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="request-btn"> Залишити заявку на продаж
+                  <span><img src="img/icons/button-arrow.svg" alt="arrow"/></span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="question-1-section">
+        <h2>Шукаєте, як швидко продати свій автомобіль?</h2>
+        <p>ArniCars – це надійний партнер для термінового автовикупу у Львові та області. Ми пропонуємо вигідні умови, чесну оцінку та миттєву виплату. Продайте авто будь-якого стану: від ідеального до аварійного.</p>
+        <hr>
+      </section>
+
+      <section class="advantages-section">
+        <h2>Переваги роботи з нами:</h2>
+        <div class="advantages-section-grid">
+        <div class="advantages-block">
+          <div class="icon"><img src="img/icons/timer.svg" alt="timer icon"></div>
+          <hr>
+          <h3>Швидка онлайн-оцінка вартості авто.</h3>
+          <p>Введіть основні параметри вашого автомобіля та отримайте чесну пропозицію за кілька хвилин.</p>
+        </div>
+        <div class="advantages-block">
+          <div class="icon"><img src="img/icons/car-key.svg" alt="car icon"></div>
+          <hr>
+          <h3>Викуп автомобілів будь-яких марок і моделей</h3>
+          <p>Ми купуємо легкові авто, мікроавтобуси, позашляховики, авто після ДТП та несправні машини.</p>
+        </div>
+        <div class="advantages-block">
+          <div class="icon"><img src="img/icons/shield.svg" alt="shield icon"></div>
+          <hr>
+          <h3>Гарантія чесної ціни</h3>
+          <p>Оцінка проводиться на основі актуального ринку, з урахуванням стану вашого авто.</p>
+        </div>
+        <div class="advantages-block">
+          <div class="icon"><img src="img/icons/money.svg" alt="money icon"></div>
+          <hr>
+          <h3>Термінові виплати</h3>
+          <p>Гроші за ваш автомобіль ви отримаєте одразу після оформлення угоди.</p>
+        </div>
+        <div class="advantages-block">
+          <div class="icon"><img src="img/icons/support.svg" alt="support manager icon"></div>
+          <hr>
+          <h3>Юридична підтримка</h3>
+          <p>Ми беремо на себе всі питання, пов'язані з документами та зняттям авто з обліку.</p>
+        </div>
+        </div>
+      </section>
+
+      <section class="question-1-section">
+        <h2>Чому обирають ArniCars?</h2>
+        <p>Ми працюємо на ринку вже кілька років і завоювали довіру сотень клієнтів. Наші головні цінності – чесність, прозорість та турбота про кожного клієнта. Незалежно від стану вашого авто, ви отримаєте справедливу ціну та швидке обслуговування.</p>
+        <hr>
+      </section>
+
+      <section class="work-section">
+        <h2> Як працюємо:</h2>
+        <div class="work-blocks">
+        <div class="work-block first">
+          <p class="work-block-number">01</p>
+          <div class="work-block-text">
+            <h4>Заповніть форму онлайн-оцінки.</h4>
+            <p>Додайте основну інформацію про ваш автомобіль (марка, модель, рік випуску, пробіг, стан).</p>
+          </div>
+        </div> 
+        <div class="work-block">
+          <p class="work-block-number">02</p>
+          <div class="work-block-text">
+            <h4>Отримайте пропозицію.</h4>
+            <p>Ми зв’яжемося з вами, щоб уточнити деталі та запропонувати найкращу ціну.</p>
+          </div>
+        </div> 
+        <div class="work-block">
+          <p class="work-block-number">03</p>
+          <div class="work-block-text">
+            <h4>Зустріч і огляд авто.</h4>
+            <p>Наш експерт приїде до вас або ви можете привезти авто в наш офіс у Львові.</p>
+          </div>
+        </div> 
+        <div class="work-block">
+          <p class="work-block-number">04</p>
+          <div class="work-block-text">
+            <h4>Швидке оформлення угоди.</h4>
+            <p>Ми забезпечуємо всі юридичні формальності.</p>
+          </div>
+        </div> 
+        <div class="work-block">
+          <p class="work-block-number">05</p>
+          <div class="work-block-text">
+            <h4>Миттєва виплата.</h4>
+            <p>Отримайте гроші готівкою або на карту відразу після підписання договору.</p>
+          </div>
+        </div> 
+        </div> 
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <p>
+          Заповніть форму оцінки прямо зараз
+          і дізнайтесь, скільки коштує ваш автомобіль!
+        </p>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <div class="logo">
+          <img src="img/telegram-cloud-photo.png" alt="logo" />
+          <span>ARNICARS</span>
+        </div>
+        <div class="contact">
+          <div>
+            <img src="img/icons/phone.svg" alt="phone icon" />
+            097 599 33 99
+          </div>
+          <div>
+            <img src="img/icons/mail.svg" alt="mail icon" />
+            info@arnicars.com.ua
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
