@@ -58,7 +58,7 @@ header h2 {
   font-size: 40px;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -1.2px;
+  letter-spacing: -1.1px;
 }
 .header-phone {
   display: flex;
@@ -286,8 +286,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 18px 0;
+  gap: 16px;
+  padding: 18px 435px 18px 453px;
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -303,15 +303,21 @@ main {
   transition: all 0.3s ease;
 }
 .form-container button:hover {
+  padding: 18px 415px 18px 453px;
   background-color: var(--red-dark-color);
   gap: 36px;
+}
+.form-container button.request-btn {
+  padding: 18px 406px;
+}
+.form-container button:hover {
+  padding: 18px 386px 18px 406px;
 }
 .form-container button span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .form-container.up {
   position: absolute;
   left: auto;
@@ -423,13 +429,13 @@ main {
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--red-color);
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 .question-1-section p {
   width: 50%;
   font-weight: 500;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 28px;
   letter-spacing: 0%;
   text-align: center;
   margin-bottom: 48px;
@@ -440,7 +446,7 @@ main {
 
 /* ADVANTAGES SECTION */
 .advantages-section {
-  margin: 0 80px 56px;
+  margin: 0 80px 60px;
 }
 .advantages-section h2 {
   text-align: center;
@@ -448,7 +454,7 @@ main {
   font-size: 36px;
   line-height: 100%;
   letter-spacing: 0%;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .advantages-block {
   display: flex;
@@ -464,29 +470,34 @@ main {
   width: 48px;
 }
 .advantages-block hr {
-  margin: 24px 0;
+  margin: 20px 0 24px;
 }
 .advantages-block h3 {
   color: var(--white-color);
   font-weight: 500;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 36.5px;
   letter-spacing: 0%;
-  margin-bottom: 43px;
+}
+.advantages-block h3:last-of-type {
+  margin-bottom: 47px;
 }
 .advantages-block p {
   color: var(--gray-light-color);
   font-weight: 500;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 18px;
   letter-spacing: 0%;
   margin-top: auto;
+}
+.advantages-block .special-width {
+  max-width: 430px;
 }
 .advantages-section-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: 1fr;
-  gap: 16px;
+  gap: 17px;
   width: 100%;
 }
 .advantages-section-grid .advantages-block:nth-child(1),
@@ -513,23 +524,25 @@ main {
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--red-color);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .work-blocks {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 13px;
 }
 .work-block {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 59px;
+  align-items: start;
+  gap: 60px;
   padding: 24px;
 }
 .work-block.first {
+  gap: 67px;
   background-color: var(--gray-ultralight-color);
   border-radius: 24px;
 }
@@ -540,7 +553,23 @@ main {
   letter-spacing: 0%;
   color: var(--gray-2-color);
 }
+.work-block:nth-of-type(2) .work-block-number {
+  margin-top: 3px;
+}
+.work-block:nth-of-type(3) .work-block-number {
+  margin-top: 6px;
+}
+.work-block:nth-of-type(4) .work-block-number {
+  margin-top: 9px;
+}
+.work-block:nth-of-type(5) .work-block-number {
+  margin-top: 13px;
+}
+.work-block:nth-of-type(4) {
+  gap: 57px;
+}
 .work-block.first .work-block-number {
+  margin-top: 11px;
   font-weight: 600;
   line-height: 43px;
   letter-spacing: 0%;
@@ -552,9 +581,9 @@ main {
 .work-block-text h4 {
   font-weight: 500;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 30px;
   letter-spacing: 0%;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 .work-block-text p {
   font-weight: 500;
@@ -567,19 +596,19 @@ main {
 footer {
   background: var(--black-2-color);
   color: var(--white-color);
-  padding: 56px 80px;
+  padding: 60px 80px;
 }
 .footer-top p {
   font-weight: 600;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 36px;
   letter-spacing: 0%;
 }
 .footer-top p:last-of-type {
   margin-bottom: 48px;
 }
 footer hr {
-  margin-bottom: 67px;
+  margin-bottom: 56px;
 }
 .footer-bottom {
   display: flex;
@@ -591,11 +620,12 @@ footer hr {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-top: 15px;
   font-family: "Museo Sans Cyrl", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -1.2px;
+  letter-spacing: -1.1px;
 }
 .logo img {
   width: 92px;
@@ -605,7 +635,8 @@ footer hr {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 28px;
+  gap: 22px;
+  margin-top: -12px;
 }
 .footer-bottom .contact a {
   font-weight: 500;
@@ -616,7 +647,7 @@ footer hr {
 .footer-bottom .contact div {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 }
 .footer-bottom .contact img {
   height: 32px;
@@ -635,7 +666,10 @@ footer hr {
     width: 80%;
   }
   .advantages-block h3 {
+    display: inline;
     font-size: 24px;
+  }
+  .advantages-block h3:last-of-type {
     margin-bottom: 43px;
   }
   .advantages-block p {
@@ -650,7 +684,7 @@ footer hr {
   header h2 {
     font-size: 20px;
   }
-  .header-phone p {
+  .header-phone a {
     font-size: 16px;
   }
   .header-phone img {
@@ -746,7 +780,10 @@ footer hr {
     margin: 16px 0 8px;
   }
   .advantages-block h3 {
+    display: inline;
     font-size: 20px;
+  }
+  .advantages-block h3:last-of-type {
     margin-bottom: 20px;
   }
   .advantages-block p {
@@ -798,8 +835,10 @@ footer hr {
   }
   header h2 {
     font-size: 16px;
+    letter-spacing: -0.2px;
+    margin-top: 2px;
   }
-  .header-phone p {
+  .header-phone a {
     font-size: 14px;
     margin-left: 8px;
   }
@@ -808,21 +847,24 @@ footer hr {
     height: 24px;
   }
   .car-image-section {
-    min-height: 110hv;
-    padding: 100px 16px;
+    min-height: 568px;
+    padding: 50px 0px;
     align-items: center;
     text-align: center;
   }
   .car-image-section .text h1 {
+    margin: 11px 5px 0 0;
     font-size: 24px;
+    font-weight: 500;
   }
   .car-image-section .text h1 span {
     font-size: 24px;
-    margin: 4px 0 16px;
+    margin: 4px 0 18px 5px;
   }
   .car-image-section .text p {
     font-size: 14px;
-    margin: 0 56px 77px;
+    line-height: 16.5px;
+    margin: 0 52px 77px 50px;
   }
   .car-image-section .rating {
     align-items: center;
@@ -836,7 +878,7 @@ footer hr {
     border-radius: 8px;
   }
   .car-image-section .rating p:first-of-type {
-    margin-bottom: 0;
+    margin-bottom: 3px;
   }
   .form-container.up {
     position: absolute;
