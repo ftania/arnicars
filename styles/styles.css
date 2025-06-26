@@ -83,7 +83,12 @@ main {
 .car-image-section {
   width: 100%;
   min-height: 783px;
-  background-image: url("../img/image.png");
+  background: radial-gradient(
+      41.67% 85.38% at 67.15% 64.81%,
+      rgba(0, 0, 0, 0) 3.2%,
+      rgba(0, 0, 0, 0.4) 90.23%
+    ),
+    url("../img/image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -275,10 +280,14 @@ main {
   color: var(--gray-light-color);
 }
 .form-row select option {
-  border-radius: 16px;
   background-color: var(--white-color);
   color: var(--black-2-color);
   padding: 12px 16px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 .form-container button {
   height: 60px;
@@ -308,9 +317,10 @@ main {
   gap: 36px;
 }
 .form-container button.request-btn {
+  margin-top: 40px;
   padding: 18px 406px;
 }
-.form-container button:hover {
+.form-container button.request-btn:hover {
   padding: 18px 386px 18px 406px;
 }
 .form-container button span {
@@ -321,7 +331,7 @@ main {
 .form-container.up {
   position: absolute;
   left: auto;
-  top: 250px;
+  top: 225px;
 }
 .form-step.step-3 {
   display: none;
@@ -345,18 +355,22 @@ main {
 .summary-left,
 .summary-right {
   flex: 1;
+  margin-left: 3px;
 }
 .summary-left h3,
 .summary-right h3 {
+  font-weight: 400;
   font-size: 32px;
-  font-weight: 100;
-  margin-bottom: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0 0 60px -4px;
 }
 .summary-right {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 220px;
 }
 .summary-right div {
   height: 100%;
@@ -370,25 +384,40 @@ main {
 .summary-list li {
   display: flex;
   align-items: center;
-  gap: 32px;
-  margin-bottom: 16px;
+  gap: 36px;
+  margin-bottom: 17px;
   font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
   color: var(--white-color);
 }
+.summary-list li:first-of-type {
+  align-items: flex-start;
+}
+.summary-list li.li-speedometer span img {
+  width: 32px;
+  padding-top: 6px;
+}
+.summary-list li.li-fuel span img {
+  width: 37px;
+  padding-top: 3px;
+  margin-left: -4px;
+}
 .summary-list li span img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
 }
 .summary-price {
   display: flex;
   align-items: center;
   justify-items: center;
-  gap: 16px;
-  font-weight: 600;
+  gap: 18px;
+  font-weight: 500;
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
-  margin-bottom: 80px;
+  margin-top: -160px;
+  margin-left: -2px;
 }
 .summary-price span {
   display: flex;
@@ -396,23 +425,25 @@ main {
   justify-items: center;
 }
 .summary-price img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
 }
 .vertical-hr {
   border: none;
-  border-left: 1.5px solid var(--gray-2-color);
-  height: 430px;
+  border-left: 2px solid var(--gray-2-color);
+  height: 405px;
   width: 0;
-  margin: 0 20px;
+  margin: -3px 20px 0;
+  position: relative;
+  left: 110px;
 }
 .thank-you-message {
   font-family: "Gilroy", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  margin-top: 50px;
 }
 
 /* QUESTION 1 SECTION */
@@ -654,9 +685,23 @@ footer hr {
   width: 32px;
 }
 
+@media (max-width: 1439px) {
+  .form-container button {
+    padding: 18px 0;
+  }
+  .form-container button:hover {
+    padding: 18px 0;
+  }
+  .form-container button.request-btn {
+    padding: 18px 0;
+  }
+  .form-container button.request-btn:hover {
+    padding: 18px 0;
+  }
+}
 @media (max-width: 980px) {
   .form-container {
-    padding: 24px;
+    padding: 22px;
     margin: -100px 40px 40px 40px;
   }
   .form-row {
@@ -700,39 +745,64 @@ footer hr {
     height: 12px;
   }
   .form-container hr {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .form-container h2 {
     margin-bottom: 16px;
     font-size: 20px;
+    line-height: 24px;
   }
   .form-container {
-    margin: -100px 16px 32px 16px;
+    margin: -79px 16px 32px 16px;
   }
   .form-content {
-    height: 456px;
+    height: 431px;
   }
   .form-row {
     flex-direction: column;
+    gap: 24px;
     margin-bottom: 24px;
   }
   .form-row select,
   .form-row input {
     height: 48px;
     font-size: 13px;
-    padding: 12px 16px;
+    padding: 10px 14px;
     flex: 1 1 100%;
     width: 100%;
     background-size: 16px;
+    background-position: right 18px center;
+    border: 2px solid var(--gray-light-color);
+  }
+  .form-row input {
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 3px;
   }
   .form-step .form-row:first-of-type {
     margin-bottom: 24px;
   }
+  .form-step .form-row:last-of-type {
+    gap: 22px;
+  }
   .form-container button {
     height: 50px;
-    padding: 16.5px 0;
+    padding: 16.5px 24.5px 16.5px 46.5px;
     font-weight: 600;
     font-size: 14px;
+  }
+  .form-container button:hover {
+    padding: 16.5px 4.5px 16.5px 46.5px;
+    background-color: var(--red-dark-color);
+    gap: 26px;
+  }
+  .form-container button.request-btn {
+    margin-top: 40px;
+    padding: 16.5px 7px;
+  }
+  .form-container button.request-btn:hover {
+    padding: 16.5px 1px 16.5px 7px;
+    gap: 22px;
   }
   .form-summary-columns {
     display: flex;
@@ -743,6 +813,9 @@ footer hr {
   .summary-right h3 {
     font-size: 28px;
     margin-bottom: 36px;
+  }
+  .summary-right {
+    padding: 1px 0 0 0;
   }
   .summary-list li {
     font-size: 20px;
@@ -757,40 +830,53 @@ footer hr {
     background-color: var(--gray-2-color);
     border: none;
     margin: 0;
+    left: 0;
+    margin-bottom: 0px;
+  }
+  .summary-price {
+    gap: 18px;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-left: 0px;
   }
   .thank-you-message {
     font-size: 28px;
   }
   .advantages-section {
-    margin: 0 24px 32px;
+    margin: 0 31px 32px 18px;
   }
   .advantages-section h2 {
     font-size: 20px;
+    margin-left: 13px;
     margin-bottom: 16px;
+    font-weight: 600;
   }
   .advantages-block {
     border-radius: 16px;
-    padding: 16px;
+    padding: 16px 15px;
   }
   .advantages-block .icon img {
     height: 24px;
     width: 24px;
   }
   .advantages-block hr {
-    margin: 16px 0 8px;
+    margin: 12px 0 7px;
   }
   .advantages-block h3 {
     display: inline;
     font-size: 20px;
+    line-height: 24px;
   }
   .advantages-block h3:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 36px;
   }
   .advantages-block p {
     font-size: 14px;
+    line-height: 16px;
   }
   .advantages-section-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   .advantages-section-grid .advantages-block:nth-child(1),
   .advantages-section-grid .advantages-block:nth-child(2),
@@ -801,7 +887,7 @@ footer hr {
   }
 
   footer {
-    padding: 40px 16px;
+    padding: 39px 16px;
   }
   .footer-top p {
     font-size: 24px;
@@ -847,10 +933,14 @@ footer hr {
     height: 24px;
   }
   .car-image-section {
+    background-position: 40% center;
     min-height: 568px;
     padding: 50px 0px;
     align-items: center;
     text-align: center;
+  }
+  .car-image-section.background-change {
+    min-height: 750px;
   }
   .car-image-section .text h1 {
     margin: 11px 5px 0 0;
@@ -873,58 +963,119 @@ footer hr {
   .car-image-section .rating .number {
     display: block;
     font-size: 15px;
-    padding: 8px 24px;
+    padding: 9px 24px;
     margin: 8px 0;
     border-radius: 8px;
   }
   .car-image-section .rating p:first-of-type {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
+
   .form-container.up {
     position: absolute;
     left: auto;
-    top: 200px;
+    top: 162px;
+    padding: 24px 22px;
+  }
+  .summary-right div {
+    align-items: start;
   }
   .summary-left h3,
   .summary-right h3 {
     font-size: 20px;
     margin-bottom: 24px;
+    text-align: center;
+  }
+  .summary-right h3 {
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  .summary-list {
+    margin-bottom: 18px;
   }
   .summary-list li {
+    gap: 35px;
     font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+  .summary-list li:nth-of-type(4) {
+    margin-top: -6px;
+  }
+  .summary-list li:nth-of-type(5) {
+    margin-top: -6px;
   }
   .summary-list li span img {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+  }
+  .summary-list li span.to-down {
+    margin-top: 3px;
+  }
+  .summary-list li span.to-up {
+    margin-bottom: 6px;
+  }
+  .summary-list li.li-speedometer span img {
+    width: 18px;
+    padding-top: 0px;
+  }
+  .summary-list li.li-fuel {
+    margin-top: -6px;
+    gap: 33px;
+  }
+  .summary-list li.li-fuel span img {
+    width: 22px;
+    padding-top: 3px;
+    margin-left: -2px;
   }
   .summary-price {
-    gap: 24px;
-    font-size: 24px;
+    padding-right: 2px;
+    gap: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
   }
   .summary-price img {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+  }
+  .form-summary-columns {
+    height: 507px;
   }
   .thank-you-message {
     font-size: 20px;
-    margin-bottom: -40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
+
   .question-1-section {
-    margin: 0 16px;
+    margin: 2px 16px 0;
   }
   .question-1-section h2 {
     font-weight: 600;
     font-size: 20px;
-    margin-bottom: 16px;
+    line-height: 24px;
+    margin: 0 0 16px -3px;
   }
   .question-1-section p {
     width: 100%;
     font-weight: 500;
     font-size: 16px;
+    line-height: 19px;
     margin-bottom: 32px;
   }
   .question-1-section hr {
     margin-bottom: 40px;
+  }
+  .question-1-section.question-2-section h2 {
+    margin-left: 2px;
+  }
+  .question-1-section.question-2-section p {
+    padding: 0 7px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
   }
   .work-section {
     margin: 0 16px 15px;
@@ -938,20 +1089,34 @@ footer hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 28px;
   }
   .work-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    padding: 16px 32px;
+    gap: 18px;
+    padding: 7px 32px 24px;
+  }
+  .work-block:nth-of-type(2) {
+    margin-top: 4px;
+  }
+  .work-block:nth-of-type(4) {
+    margin-top: -2px;
+    gap: 18px;
+  }
+  .work-block:nth-of-type(5) {
+    margin-top: -6px;
   }
   .work-block-number {
     font-size: 24px;
   }
+  .work-block.first {
+    gap: 9px;
+  }
   .work-block.first .work-block-number {
-    font-weight: 700;
+    font-weight: 600;
   }
   .work-block-text {
     text-align: center;
@@ -959,21 +1124,22 @@ footer hr {
   .work-block-text h4 {
     font-weight: 600;
     font-size: 20px;
-    margin-bottom: 8px;
+    line-height: 23px;
+    margin-bottom: 9px;
   }
   .work-block-text p {
     font-size: 14px;
+    line-height: 16px;
   }
 
   .footer-top p {
     display: inline;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 24px;
   }
   footer hr {
-    margin: 32px 0 15px;
+    margin: 32px 0 24px;
   }
   .footer-bottom {
     display: flex;
@@ -984,7 +1150,11 @@ footer hr {
   }
   .logo {
     order: 2;
+    gap: 8px;
     font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.3px;
     margin-top: 30px;
   }
   .logo img {
@@ -993,9 +1163,14 @@ footer hr {
   }
   .footer-bottom .contact {
     order: 1;
-    gap: 8px;
-    font-size: 14px;
+    gap: 13px;
     align-items: center;
+  }
+  .footer-bottom .contact div {
+    gap: 8px;
+  }
+  .footer-bottom .contact a {
+    font-size: 14px;
   }
   .footer-bottom .contact img {
     height: 24px;

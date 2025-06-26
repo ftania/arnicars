@@ -43,7 +43,7 @@
             <div class="form-step step-1 active">
               <div class="form-content">
                 <div class="form-row">
-                  <select required>
+                  <select name="brand" required>
                     <option value="" disabled selected>Виберіть марку</option>
                     <option value="Acura">Acura</option>
                     <option value="Alfa Romeo">Alfa Romeo</option>
@@ -53,7 +53,7 @@
                     <option value="Renault">Renault</option>
                     <option value="Skoda">Skoda</option>
                   </select>
-                  <select required>
+                  <select name="year" required>
                     <option value="" disabled selected>
                       Виберіть рік випуску
                     </option>
@@ -71,7 +71,7 @@
                   </select>
                 </div>
                 <div class="form-row">
-                  <select required>
+                  <select name="model" required>
                     <option value="" disabled selected>Виберіть модель</option>
                     <option value="8 series Gran Coupe">
                       8 series Gran Coupe
@@ -81,7 +81,7 @@
                     <option value="Q8">Q8</option>
                     <option value="X5">X5</option>
                   </select>
-                  <select required>
+                  <select name="engine" required>
                     <option value="" disabled selected>
                       Виберіть обʼєм двигуна
                     </option>
@@ -91,8 +91,8 @@
                   </select>
                 </div>
                 <div class="form-row">
-                  <input type="text" placeholder="Ваше імʼя" />
-                  <input type="text" placeholder="Ваш телефон" />
+                  <input type="text" name="name" placeholder="Ваше імʼя" />
+                  <input type="text" name="phone" placeholder="Ваш телефон" />
                 </div>
               </div>
               <button type="button" class="next-btn">
@@ -106,14 +106,14 @@
             <div class="form-step step-2">
               <div class="form-content">
                 <div class="form-row">
-                  <select required>
+                  <select name="fuel" required>
                     <option value="" disabled selected>
                       Виберіть тип палива
                     </option>
                     <option value="Бензин">Бензин</option>
                     <option value="Дизель">Дизель</option>
                   </select>
-                  <select required>
+                  <select name="drive" required>
                     <option value="" disabled selected>Виберіть привід</option>
                     <option value="Повний">Повний</option>
                     <option value="Передній">Передній</option>
@@ -121,14 +121,14 @@
                   </select>
                 </div>
                 <div class="form-row">
-                  <select required>
+                  <select name="gearbox" required>
                     <option value="" disabled selected>
                       Виберіть коробку передач
                     </option>
                     <option value="Автомат">Автомат</option>
                     <option value="Механіка">Механіка</option>
                   </select>
-                  <select required>
+                  <select name="mileage" required>
                     <option value="" disabled selected>Виберіть пробіг</option>
                     <option value="2000">2000</option>
                     <option value="3000">3000</option>
@@ -181,144 +181,147 @@
         </div>
       </section>
 
-      <section class="question-1-section">
-        <h2>Шукаєте, як швидко продати свій автомобіль?</h2>
-        <p>
-          ArniCars – це надійний партнер для термінового автовикупу у Львові та
-          області. Ми пропонуємо вигідні умови, чесну оцінку та миттєву виплату.
-          Продайте авто будь-якого стану: від ідеального до аварійного.
-        </p>
-        <hr />
-      </section>
+      <div class="content-after-form">
+        <section class="question-1-section">
+          <h2>Шукаєте, як швидко продати свій автомобіль?</h2>
+          <p>
+            ArniCars – це надійний партнер для термінового автовикупу у Львові
+            та області. Ми пропонуємо вигідні умови, чесну оцінку та миттєву
+            виплату. Продайте авто будь-якого стану: від ідеального до
+            аварійного.
+          </p>
+          <hr />
+        </section>
 
-      <section class="advantages-section">
-        <h2>Переваги роботи з нами:</h2>
-        <div class="advantages-section-grid">
-          <div class="advantages-block">
-            <div class="icon">
-              <img src="img/icons/timer.svg" alt="timer icon" />
+        <section class="advantages-section">
+          <h2>Переваги роботи з нами:</h2>
+          <div class="advantages-section-grid">
+            <div class="advantages-block">
+              <div class="icon">
+                <img src="img/icons/timer.svg" alt="timer icon" />
+              </div>
+              <hr />
+              <h3>Швидка онлайн-оцінка вартості авто.</h3>
+              <p>
+                Введіть основні параметри вашого автомобіля та отримайте чесну
+                пропозицію за кілька хвилин.
+              </p>
             </div>
-            <hr />
-            <h3>Швидка онлайн-оцінка вартості авто.</h3>
-            <p>
-              Введіть основні параметри вашого автомобіля та отримайте чесну
-              пропозицію за кілька хвилин.
-            </p>
+            <div class="advantages-block">
+              <div class="icon">
+                <img src="img/icons/car-key.svg" alt="car icon" />
+              </div>
+              <hr />
+              <div>
+                <h3>Викуп автомобілів</h3>
+                <h3>будь-яких марок</h3>
+                <h3>і моделей</h3>
+              </div>
+              <p>
+                Ми купуємо легкові авто, мікроавтобуси, позашляховики, авто
+                після ДТП та несправні машини.
+              </p>
+            </div>
+            <div class="advantages-block">
+              <div class="icon">
+                <img src="img/icons/shield.svg" alt="shield icon" />
+              </div>
+              <hr />
+              <h3>Гарантія чесної ціни</h3>
+              <p>
+                Оцінка проводиться на основі актуального ринку, з урахуванням
+                стану вашого авто.
+              </p>
+            </div>
+            <div class="advantages-block">
+              <div class="icon">
+                <img src="img/icons/money.svg" alt="money icon" />
+              </div>
+              <hr />
+              <h3>Термінові виплати</h3>
+              <p>
+                Гроші за ваш автомобіль ви отримаєте одразу після оформлення
+                угоди.
+              </p>
+            </div>
+            <div class="advantages-block">
+              <div class="icon">
+                <img src="img/icons/support.svg" alt="support manager icon" />
+              </div>
+              <hr />
+              <h3>Юридична підтримка</h3>
+              <p class="special-width">
+                Ми беремо на себе всі питання, пов'язані з документами та
+                зняттям авто з обліку.
+              </p>
+            </div>
           </div>
-          <div class="advantages-block">
-            <div class="icon">
-              <img src="img/icons/car-key.svg" alt="car icon" />
-            </div>
-            <hr />
-            <div>
-              <h3>Викуп автомобілів</h3>
-              <h3>будь-яких марок</h3>
-              <h3>і моделей</h3>
-            </div>
-            <p>
-              Ми купуємо легкові авто, мікроавтобуси, позашляховики, авто після
-              ДТП та несправні машини.
-            </p>
-          </div>
-          <div class="advantages-block">
-            <div class="icon">
-              <img src="img/icons/shield.svg" alt="shield icon" />
-            </div>
-            <hr />
-            <h3>Гарантія чесної ціни</h3>
-            <p>
-              Оцінка проводиться на основі актуального ринку, з урахуванням
-              стану вашого авто.
-            </p>
-          </div>
-          <div class="advantages-block">
-            <div class="icon">
-              <img src="img/icons/money.svg" alt="money icon" />
-            </div>
-            <hr />
-            <h3>Термінові виплати</h3>
-            <p>
-              Гроші за ваш автомобіль ви отримаєте одразу після оформлення
-              угоди.
-            </p>
-          </div>
-          <div class="advantages-block">
-            <div class="icon">
-              <img src="img/icons/support.svg" alt="support manager icon" />
-            </div>
-            <hr />
-            <h3>Юридична підтримка</h3>
-            <p class="special-width">
-              Ми беремо на себе всі питання, пов'язані з документами та зняттям
-              авто з обліку.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="question-1-section">
-        <h2>Чому обирають ArniCars?</h2>
-        <p>
-          Ми працюємо на ринку вже кілька років і завоювали довіру сотень
-          клієнтів. Наші головні цінності – чесність, прозорість та турбота про
-          кожного клієнта. Незалежно від стану вашого авто, ви отримаєте
-          справедливу ціну та швидке обслуговування.
-        </p>
-        <hr />
-      </section>
+        <section class="question-1-section question-2-section">
+          <h2>Чому обирають ArniCars?</h2>
+          <p>
+            Ми працюємо на ринку вже кілька років і завоювали довіру сотень
+            клієнтів. Наші головні цінності – чесність, прозорість та турбота
+            про кожного клієнта. Незалежно від стану вашого авто, ви отримаєте
+            справедливу ціну та швидке обслуговування.
+          </p>
+          <hr />
+        </section>
 
-      <section class="work-section">
-        <h2>Як працюємо:</h2>
-        <div class="work-blocks">
-          <div class="work-block first">
-            <p class="work-block-number">01</p>
-            <div class="work-block-text">
-              <h4>Заповніть форму онлайн-оцінки.</h4>
-              <p>
-                Додайте основну інформацію про ваш автомобіль (марка, модель,
-                рік випуску, пробіг, стан).
-              </p>
+        <section class="work-section">
+          <h2>Як працюємо:</h2>
+          <div class="work-blocks">
+            <div class="work-block first">
+              <p class="work-block-number">01</p>
+              <div class="work-block-text">
+                <h4>Заповніть форму онлайн-оцінки.</h4>
+                <p>
+                  Додайте основну інформацію про ваш автомобіль (марка, модель,
+                  рік випуску, пробіг, стан).
+                </p>
+              </div>
+            </div>
+            <div class="work-block">
+              <p class="work-block-number">02</p>
+              <div class="work-block-text">
+                <h4>Отримайте пропозицію.</h4>
+                <p>
+                  Ми зв’яжемося з вами, щоб уточнити деталі та запропонувати
+                  найкращу ціну.
+                </p>
+              </div>
+            </div>
+            <div class="work-block">
+              <p class="work-block-number">03</p>
+              <div class="work-block-text">
+                <h4>Зустріч і огляд авто.</h4>
+                <p>
+                  Наш експерт приїде до вас або ви можете привезти авто в наш
+                  офіс у Львові.
+                </p>
+              </div>
+            </div>
+            <div class="work-block">
+              <p class="work-block-number">04</p>
+              <div class="work-block-text">
+                <h4>Швидке оформлення угоди.</h4>
+                <p>Ми забезпечуємо всі юридичні формальності.</p>
+              </div>
+            </div>
+            <div class="work-block">
+              <p class="work-block-number">05</p>
+              <div class="work-block-text">
+                <h4>Миттєва виплата.</h4>
+                <p>
+                  Отримайте гроші готівкою або на карту відразу після підписання
+                  договору.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="work-block">
-            <p class="work-block-number">02</p>
-            <div class="work-block-text">
-              <h4>Отримайте пропозицію.</h4>
-              <p>
-                Ми зв’яжемося з вами, щоб уточнити деталі та запропонувати
-                найкращу ціну.
-              </p>
-            </div>
-          </div>
-          <div class="work-block">
-            <p class="work-block-number">03</p>
-            <div class="work-block-text">
-              <h4>Зустріч і огляд авто.</h4>
-              <p>
-                Наш експерт приїде до вас або ви можете привезти авто в наш офіс
-                у Львові.
-              </p>
-            </div>
-          </div>
-          <div class="work-block">
-            <p class="work-block-number">04</p>
-            <div class="work-block-text">
-              <h4>Швидке оформлення угоди.</h4>
-              <p>Ми забезпечуємо всі юридичні формальності.</p>
-            </div>
-          </div>
-          <div class="work-block">
-            <p class="work-block-number">05</p>
-            <div class="work-block-text">
-              <h4>Миттєва виплата.</h4>
-              <p>
-                Отримайте гроші готівкою або на карту відразу після підписання
-                договору.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer>
@@ -345,6 +348,7 @@
       </div>
     </footer>
 
+    <script src="js/CarFormHandler.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
